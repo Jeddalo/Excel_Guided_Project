@@ -1,5 +1,9 @@
 # SCOPE
-This project carries out data analysis to find answers and provide insights for professionals in that data field. The data gotten from Luke Barousse uses Excel to carry out data analytics process.
+This project carries out data analysis to find answers and provide insights for professionals in the data field. The project creates an interactive Salary dashboard that helps professional Job seekers investigate their desired job and ensure that they are getting adequately compensated.The data gotten from Luke Barousse uses Excel to carry out data analytics process.
+
+# Excel Salary Dashboard
+
+<img width="1129" height="524" alt="Image" src="https://github.com/user-attachments/assets/732d3765-c47a-40aa-b7bd-5174c1ed72fb" />
 
 ## The DataSet Used
 The dataset used has gotten from Job Postings has 32,673 rows  that has the following Column:
