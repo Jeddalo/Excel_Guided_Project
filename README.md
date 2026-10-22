@@ -38,7 +38,7 @@ Horizontal bar charts were plotted to illustrate the results of the job count, m
 * The job titles and job type are sorted by descending salary, which users can easily identify the highest and lowest job salaries and job type amount.
 * From the bar charts above, it is revealed that senior and engineer roles are higher paying than analyst roles, and that the majority of the job types are full-time.
 
-  ### Map Chart
+  ### ### 🧮 Map Chart
 
   <img width="333" height="237" alt="Image" src="https://github.com/user-attachments/assets/2739ec8d-9f31-43b8-a921-a301bc1c0abe" />
 
@@ -71,13 +71,31 @@ The `median()` function was used along with a nested `if()` function to compute 
 
 The median salaries were then sorted in ascending order so that the job title bar graph can display the results in descending order. Also, 2 other columns were created based on the selected job title so that the bar graph can display the selected job title in dark blue, and the other job titles in light blue.  
 
-Finally, to display the median salary of the selected job title onto the dashboard, the `xlookup()` function was used:
+<img width="399" height="196" alt="Image" src="https://github.com/user-attachments/assets/81d610e6-ad2f-41f9-9093-14956a089340" />
+
+To display the median salary of the selected job title onto the dashboard, the `xlookup()` function was used:
 
 
 #### Job Count:
 To compute the job count of the job title, country, and job type selected, the `count()` function was used with a nested `if()` function. Similar to the median function used, the job title, country, job type, and the existence of a yearly salary conditions were incorporated into the count function.
 
+```
+COUNT(
+  IF(
+    (jobs[job_country]=country)*
+    (jobs[job_title_short]=A2)*
+    (ISNUMBER(SEARCH(type,jobs[job_schedule_type]))),
+    jobs[salary_year_avg]
+  )
+)
+```
 The formula will produce the resulting array, in which the selected job title count will be displayed on the dashboard through the xlookup function: 
+
+<img width="259" height="222" alt="Image" src="https://github.com/user-attachments/assets/d0f3af9f-e650-4bdf-898c-672c6d4398fc" />
+
+## Conclusion
+
+I created this dashboard to showcase insights into salary trends across various data-related job titles. Utilizing the data, this dashboard allows users to make informed decisions about their career paths. Exploring the functionalities to understand how location and job type influence salaries.
 
 
 
