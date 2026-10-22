@@ -17,7 +17,7 @@ The dataset used has gotten from Job Postings has 32,673 rows  that has the foll
 * Job posted date
 
 # Dashboard File
-My Final dashboard is in 
+My Final dashboard is in: [Salary_Dashboard_project.xlsx](https://github.com/user-attachments/files/33824647/Salary_Dashboard_project.xlsx)
 
   ## PROCESS
   The following excel tools were a huge part of what was used for the analytics:
@@ -92,6 +92,15 @@ COUNT(
 The formula will produce the resulting array, in which the selected job title count will be displayed on the dashboard through the xlookup function: 
 
 <img width="259" height="222" alt="Image" src="https://github.com/user-attachments/assets/d0f3af9f-e650-4bdf-898c-672c6d4398fc" />
+
+### Data Validation
+
+<img width="386" height="328" alt="Image" src="https://github.com/user-attachments/assets/a5267477-55b1-4055-b394-edda5ef66e35" />
+
+The drop down menus are created through data validation to allow users to select the options listed from the menus to explore their ideal jobs.
+* The `unique()` function was used to produce the unique job titles, countries, and job type of the dataset. This allowed users to identify what choices they can select.
+* Only the unique values from the drop down menus can be selected in order for the charts and results to display correctly.
+
 
 ## Conclusion
 
