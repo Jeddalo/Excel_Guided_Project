@@ -38,7 +38,7 @@ Horizontal bar charts were plotted to illustrate the results of the job count, m
 * The job titles and job type are sorted by descending salary, which users can easily identify the highest and lowest job salaries and job type amount.
 * From the bar charts above, it is revealed that senior and engineer roles are higher paying than analyst roles, and that the majority of the job types are full-time.
 
-  ### ### 🧮 Map Chart
+  ### Map Chart
 
   <img width="333" height="237" alt="Image" src="https://github.com/user-attachments/assets/2739ec8d-9f31-43b8-a921-a301bc1c0abe" />
 
