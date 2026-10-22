@@ -27,13 +27,47 @@ My Final dashboard is in
 
 ## Dashboard Build
 ## 📉 Charts
+#### 📊 Data Science Job Salaries - Bar Chart
+
+<img width="365" height="251" alt="Image" src="https://github.com/user-attachments/assets/b947cc58-5240-4556-b80c-7a0e61de7e33" />
+<img width="365" height="251" alt="Image" src="https://github.com/user-attachments/assets/c33dae55-4628-4c93-8fa2-09e0480656c4" />
+
+
+Horizontal bar charts were plotted to illustrate the results of the job count, median salaries and job platform based on the selected job title, country, and job type.
+* In both bar charts, the selected job title and job type are bolded, which users can easily compare their selected job title and job type with the other ones.
+* The job titles and job type are sorted by descending salary, which users can easily identify the highest and lowest job salaries and job type amount.
+* From the bar charts above, it is revealed that senior and engineer roles are higher paying than analyst roles, and that the majority of the job types are full-time.
+
+  ### Map Chart
+
+  <img width="333" height="237" alt="Image" src="https://github.com/user-attachments/assets/2739ec8d-9f31-43b8-a921-a301bc1c0abe" />
+
+  A map chart was plotted to identify the countries with the highest median salaries based on the selected job title and job type. 
+* The countries from the map chart are color coded where the ones with a darker blue color are the ones with the higher median salaries, and the countries in grey are ones with no jobs available of the selected job title and type.
+* Users can easily differentiate and compare the job salaries of each country, and can move the cursor towards a certain country to display its exact median salary
+* For full-time data analyst positions, from the map above, the cursor is on the United States country where it displays the median salary to be $90,000. Also, the country that is dark blue is Belarus, which has the highest median salary of $400,000.
+
 
 ## Formulas and Function
 #### Median Salary by Job Title:
 To get the median salary of each of the job titles, a separate Excel sheet was used to store the computed data. First, the `unique()` function was used to gather the unique job titles. Then, the following formula & functions were used:
 
 
+```
+=MEDIAN(
+IF(
+    (jobs[job_title_short]=A2)*
+    (jobs[job_country]=country)*
+    (ISNUMBER(SEARCH(type,jobs[job_schedule_type])))*
+    (jobs[salary_year_avg]<>0),
+    jobs[salary_year_avg]
+)
+)
+```
+
 The `median()` function was used along with a nested `if()` function to compute an array of the job title median salaries based on the selected job title, country, job type, and the existence of a yearly salary. The following results have been produced:
+
+<img width="270" height="216" alt="Image" src="https://github.com/user-attachments/assets/9d0e5616-f4c7-4e8b-ab01-0bf685261f97" />
 
 The median salaries were then sorted in ascending order so that the job title bar graph can display the results in descending order. Also, 2 other columns were created based on the selected job title so that the bar graph can display the selected job title in dark blue, and the other job titles in light blue.  
 
